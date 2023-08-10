@@ -1,0 +1,52 @@
+/* styles for pages created by Ashmeet  */
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:200,300,400,700);
+@import url(https://fonts.googleapis.com/css2?family=Tektur&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap); 
+@import url(https://fonts.googleapis.com/css2?family=Preahvihear&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Comfortaa';
+    color: white;
+}
+
+
+
+.bgblack {
+    background-color: black;
+}
+
+.font-comfortaa {
+    font-family: 'Comfortaa';
+
+}
+
+.font-tektur{
+    font-family: 'Tektur';
+}
+
+.font-exo{
+    font-family: 'Exo 2';
+}
+
+.font-preahvihear{
+    font-family: 'Preahvihear';
+}
+
+.hover-orange:hover {
+    fill: #ff8330;
+    color: #ff8330;
+    transition: 0.2s;
+    scale: 1.1;
+}
+
+.color-red{
+    color: rgb(145, 0, 0);
+
+}
+
+.landingHead{
+    font-size: 5em;
+}
