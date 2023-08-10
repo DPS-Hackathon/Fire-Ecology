@@ -44,7 +44,15 @@
 
 .color-red{
     color: rgb(145, 0, 0);
+}
 
+.button{
+    background-color: orangered;
+    color: white;
+}
+.button:hover{
+    background-color: red;
+    color: white;
 }
 
 .landingHead{
