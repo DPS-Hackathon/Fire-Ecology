@@ -52,15 +52,20 @@
 }
 
 .bgdefination{
-    background-color: #206000;
-    fill: #206000;
+    background-color: #1b4e01;
+    fill: #1b4e01;
 }
 
 .bgenvironmenteffect{
-    background-color: rebeccapurple;
-    fill: rebeccapurple;
+    background-color: #205e00;
+    fill: #205e00;
 }
 
-.text-justified{
+.text-justify{
     text-align: justify;
+}
+
+
+.effects-card{
+    background-color: #2e6c0f;
 }
