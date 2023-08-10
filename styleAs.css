@@ -52,7 +52,13 @@
 }
 
 .bgdefination{
-    background-color: rgb(32, 96, 0);
+    background-color: #206000;
+    fill: #206000;
+}
+
+.bgenvironmenteffect{
+    background-color: rebeccapurple;
+    fill: rebeccapurple;
 }
 
 .text-justified{
