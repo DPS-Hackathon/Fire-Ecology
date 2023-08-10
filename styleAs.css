@@ -50,3 +50,11 @@
 .landingHead{
     font-size: 3.5em;
 }
+
+.bgdefination{
+    background-color: red;
+}
+
+.text-justified{
+    text-align: justify;
+}
