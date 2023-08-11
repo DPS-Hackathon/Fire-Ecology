@@ -49,10 +49,12 @@
 .button{
     background-color: #ff6200;
     color: white;
+    transition: 0.3s;
 }
 .button:hover{
-    background-color: red;
-    color: white;
+    background-color: #ff6200;
+    border: none;
+    scale: 1.2;
 }
 
 .landingHead{
@@ -61,7 +63,6 @@
 .bg-green{
     background-color: green;
 }
-
 
 .bgWhat{
     background-color: #a93500;
@@ -76,4 +77,6 @@
 .organisation-card{
     background-color: #d4551a;
     fill: #d4551a;
+    text-align: justify;
+
 }
