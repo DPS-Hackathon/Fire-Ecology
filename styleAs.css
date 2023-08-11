@@ -1,7 +1,7 @@
 /* styles for pages created by Ashmeet  */
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:200,300,400,700);
 @import url(https://fonts.googleapis.com/css2?family=Tektur&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap); 
+@import url(https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Preahvihear&display=swap);
 
 * {
@@ -23,15 +23,15 @@
 
 }
 
-.font-tektur{
+.font-tektur {
     font-family: 'Tektur';
 }
 
-.font-exo{
+.font-exo {
     font-family: 'Exo 2';
 }
 
-.font-preahvihear{
+.font-preahvihear {
     font-family: 'Preahvihear';
 }
 
@@ -42,30 +42,37 @@
     scale: 1.1;
 }
 
-.orangeCol{
+.orangeCol {
     color: #ff8330;
 
 }
 
-.landingHead{
+.landingHead {
     font-size: 3.5em;
 }
 
-.bgdefination{
+.bgdefination {
     background-color: #1b4e01;
     fill: #1b4e01;
 }
 
-.bgenvironmenteffect{
+.bgenvironmenteffect {
     background-color: #205e00;
     fill: #205e00;
 }
 
-.text-justify{
+.text-justify {
     text-align: justify;
 }
 
 
-.effects-card{
-    background-color: #2e6c0f;
+.effects-card {
+    background-color: #316a15;
+    transition: 0.6s;
+}
+
+.bgorganisations {
+    background-color: #267100;
+    fill: #205e00;
+
 }
