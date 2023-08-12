@@ -77,3 +77,26 @@
     background-color: #317d0a;
     fill: #205e00;
 }
+
+.translucent-black{
+    backdrop-filter: blur(20px);
+    background-color: rgb(14, 14, 14);
+}
+
+.signField{
+    background-color: rgb(25, 25, 25) !important;
+    border: blue !important;
+    color: rgb(202, 202, 202) !important;
+}
+
+.signButton{
+    background-color: black;
+    border-color: blue;
+    transition: 0.4s;
+}
+
+.signButton:hover{
+    background-color: #c2540a;
+    border: black;
+    scale: 1.04;
+}   
