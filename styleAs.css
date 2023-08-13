@@ -73,30 +73,39 @@
 
 }
 
-.organisation-card{
+.organisation-card {
     background-color: #317d0a;
     fill: #205e00;
 }
 
-.translucent-black{
+.translucent-black {
     backdrop-filter: blur(20px);
     background-color: rgb(14, 14, 14);
 }
 
-.signField{
-    background-color: rgb(25, 25, 25) !important;
-    border: blue !important;
-    color: rgb(202, 202, 202) !important;
+.signField {
+    background-color: #191919 !important;
+    border: #c2540a !important;
+    color: #cacaca !important;
 }
 
-.signButton{
+.signButton {
     background-color: black;
-    border-color: blue;
+    border-color: #ce6b08;
     transition: 0.4s;
 }
 
-.signButton:hover{
+.signButton:hover {
     background-color: #c2540a;
     border: black;
     scale: 1.04;
-}   
+}
+
+.signOther {
+    color: #ff8330;
+}
+
+.signOther:hover {
+    color: #db5800;
+    
+}
