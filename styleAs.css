@@ -119,3 +119,31 @@
     background-color: #191919;
     transition: 0.6s;
 }
+
+.img-blog{
+    width: 600px;
+    height: 400px;
+}
+
+.blogWriteBG{
+    background-color: #1d1d1d;
+}
+
+
+.blogField{
+    background-color: #2e2e2e !important;
+    border: none !important;
+    color: white !important;
+}
+
+.buttonPost{
+    background-color: #fc7a23;
+    border: none;
+    color: black;
+    transition: 0.4s;
+}
+
+.buttonPost:hover{
+    background-color: green;
+    scale: 1.1;
+}
