@@ -114,3 +114,8 @@
     height: 300px;
     width: auto;
 }
+
+.blog-card{
+    background-color: #191919;
+    transition: 0.6s;
+}
