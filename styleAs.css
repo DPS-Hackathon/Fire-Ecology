@@ -140,6 +140,19 @@
     background-color: #fc7a23;
     border: none;
     color: black;
+    transition: 0.3s;
+}
+
+.buttonPost:hover{
+    background-color: green;
+    color: black;
+    scale: 1.1;
+}
+
+.buttonPost{
+    background-color: #fc7a23;
+    border: none;
+    color: black;
     transition: 0.4s;
 }
 
