@@ -158,7 +158,6 @@
         <!-- Application Script -->
         <script src="script.js"></script>
         <script>
-
             
             function getDATA() {
                 database.ref("blogs").once("value")
@@ -170,8 +169,8 @@
                             postContent = post.content;
 
                             blogList = document.getElementById('blogList')
-
-                            var blogCard = document.createElement('')
+                            
+                            document_area.insertAdjacentHTML("afterbegin",`<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><strong>${title}</strong> ${description}<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>`);
                         });
                     })
                     .catch((error) => {
