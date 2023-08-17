@@ -162,32 +162,7 @@
 
         <!-- Application Script -->
         <script src="script.js"></script>
-<<<<<<< Updated upstream
-        <script>
-
-            function getDATA() {
-                database.ref("blogs").once("value")
-                    .then((snapshot) => {
-                        snapshot.forEach((childSnapshot) => {
-                            const post = childSnapshot.val();
-                            postAUthor = post.by;
-                            postTitle = post.title;
-                            postContent = post.content;
-
-                            blogList = document.getElementById('blogList')
-                            
-                            document_area.insertAdjacentHTML("afterbegin",`<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><strong>${title}</strong> ${description}<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>`);
-                        });
-                    })
-                    .catch((error) => {
-                        console.error("Error fetching data: ", error);
-                    });
-
-            }
-            getDATA();
-        </script>
-=======
->>>>>>> Stashed changes
+        
 
 
 
