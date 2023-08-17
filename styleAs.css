@@ -12,6 +12,11 @@
     color: white;
 }
 
+p{
+    margin: 0;
+    padding: 0;
+}
+
 
 
 .bgblack {
@@ -107,56 +112,56 @@
 
 .signOther:hover {
     color: #db5800;
-    
+
 }
 
-.img-earth{
+.img-earth {
     height: 300px;
     width: auto;
 }
 
-.blog-card{
+.blog-card {
     background-color: #191919;
-    transition: 0.6s;
+
 }
 
-.img-blog{
+.img-blog {
     width: 600px;
     height: 400px;
 }
 
-.blogWriteBG{
+.blogWriteBG {
     background-color: #1d1d1d;
 }
 
 
-.blogField{
+.blogField {
     background-color: #2e2e2e !important;
     border: none !important;
     color: white !important;
 }
 
-.buttonPost{
+.buttonPost {
     background-color: #fc7a23;
     border: none;
     color: black;
     transition: 0.3s;
 }
 
-.buttonPost:hover{
+.buttonPost:hover {
     background-color: green;
     color: black;
     scale: 1.1;
 }
 
-.buttonPost{
+.buttonRead {
     background-color: #fc7a23;
     border: none;
-    color: black;
-    transition: 0.4s;
+    color: black !important;
+    transition: 0.3s;
 }
 
-.buttonPost:hover{
-    background-color: green;
+.buttonRead:hover {
+    background-color: #e85d00;
     scale: 1.1;
 }
