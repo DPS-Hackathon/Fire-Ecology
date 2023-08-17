@@ -77,6 +77,9 @@ function signIn(){
 };
 
 function getDATA() {
+
+    const loadingIcon = document.getElementById('loading')
+
     database.ref("blogs").once("value")
         .then((snapshot) => {
             snapshot.forEach((childSnapshot) => {
@@ -86,7 +89,9 @@ function getDATA() {
                 postContent = post.content;
                 let document_area = document.getElementById("blogList")
                 document_area.insertAdjacentHTML("afterbegin",`<div class=\"col-8 col-sm-5 col-lg-4 col-xl-3 mx-1 blog-card rounded-2 shadow-lg my-4  \"><div class=\"text-center mb-4 mt-3 blog-img\"><img src=\"https://placehold.co/400x300\" class=\"img-fluid\" alt=\"\"></div><div class=\"text-center my-4 \"><h2 class=\"fs-4\">${post.title}</h2></div><div class=\"text-center mt-3 mb-5\"><h3 class=\"fs-6\">By: ${post.postAUthor}</h3></div><div class=\"text-center mt-4 mb-4\"><a href=\"\" class=\"btn buttonPost\">Read </a></div></div>`);
+                
             });
+            loadingIcon.classList.add('d-none')
         })
         .catch((error) => {
             console.error("Error fetching data: ", error);

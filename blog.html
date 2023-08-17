@@ -89,6 +89,18 @@
                             </a> </b>
                     </li>
 
+                    <li class="nav-item mt-lg-1 mx-3 fs-5 "><b><a href="blogwrite.html" class="nav-link ">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" fill="gray"
+                                    class="bi bi-pencil-square  hover-orange my-auto" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                    <path fill-rule="evenodd"
+                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                </svg>
+                            </a> </b>
+                    </li>
+
 
                 </ul>
             </div>
@@ -104,10 +116,19 @@
 
         <section id="blogSections">
             <div class="container">
+
+                <div class="row justify-content-center" id="loading">
+                    <div class="col-5 text-center" >
+
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                        <span role="status">Loading...</span>
+
+                    </div>
+                </div>
                 <div class="row justify-content-evenly" id="blogList">
 
                     <!-- One -->
-                    <div class="col-8 col-sm-5 col-lg-4 col-xl-3 mx-1 blog-card rounded-2 shadow-lg my-4  ">
+                    <!-- <div class="col-8 col-sm-5 col-lg-4 col-xl-3 mx-1 blog-card rounded-2 shadow-lg my-4  ">
 
                         <div class="text-center mb-4 mt-3 blog-img">
                             <img src="https://placehold.co/400x300" class="img-fluid" alt="">
@@ -127,9 +148,7 @@
                             <a href="" class="btn buttonPost">Read </a>
                         </div>
 
-                    </div>
-
-
+                    </div> -->
 
                 </div>
             </div>
@@ -162,7 +181,7 @@
 
         <!-- Application Script -->
         <script src="script.js"></script>
-        
+
 
 
 
@@ -174,7 +193,6 @@
 
 
             firebase.auth().onAuthStateChanged((user) => {
-
                 if (user) {
                     console.log('yes');
                     logoutIcon.classList.remove('d-none');
