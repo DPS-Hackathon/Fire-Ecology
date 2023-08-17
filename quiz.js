@@ -6,6 +6,7 @@ const quizData = [
         c: "Indian Space Research Organisation",
         d: "Indian Space and Research Observatory",
         correct: "c",
+        correctBG: "cBG",
     },
     {
         question: " What is the full form of GSLV?",
@@ -14,6 +15,8 @@ const quizData = [
         c: "Geosynchronous Satellite Lifting Vehicle",
         d: "Geostar Satellite Launch Vehicle",
         correct: "b",
+        correctBG: "bBG",
+
     },
     {
         question: " When was ISRO Established?",
@@ -102,8 +105,74 @@ let currentQuiz = 0;
 let score = 0;
 let level = currentQuiz + 1;
 
+const defaultColor = '#17337c';
+const selectedColor = "#055b91";
+
+const radios = document.getElementsByTagName("input")
+
+const aBG = document.getElementById('aBG');
+const bBG = document.getElementById('bBG');
+const cBG = document.getElementById('cBG');
+const dBG = document.getElementById('dBG');
+
+const aRadio = document.getElementById('a')
+const bRadio = document.getElementById('b')
+const cRadio = document.getElementById('c')
+const dRadio = document.getElementById('d')
+
+
+aRadio.addEventListener('change', function () {
+    console.log('yaa')
+    if (aRadio.checked) {
+        aBG.style.backgroundColor = selectedColor;
+        bBG.style.backgroundColor = defaultColor;
+        cBG.style.backgroundColor = defaultColor;
+        dBG.style.backgroundColor = defaultColor;
+    }
+
+});
+
+bRadio.addEventListener('change', function () {
+    console.log('yaa')
+    if (bRadio.checked) {
+        aBG.style.backgroundColor = defaultColor;
+        bBG.style.backgroundColor = selectedColor;
+        cBG.style.backgroundColor = defaultColor;
+        dBG.style.backgroundColor = defaultColor;
+    }
+
+});
+
+cRadio.addEventListener('change', function () {
+    console.log('yaa')
+    if (cRadio.checked) {
+        aBG.style.backgroundColor = defaultColor;
+        bBG.style.backgroundColor = defaultColor;
+        cBG.style.backgroundColor = selectedColor;
+        dBG.style.backgroundColor = defaultColor;
+    }
+
+});
+
+dRadio.addEventListener('change', function () {
+    console.log('yaa')
+    if (dRadio.checked) {
+        aBG.style.backgroundColor = defaultColor;
+        bBG.style.backgroundColor = defaultColor;
+        cBG.style.backgroundColor = defaultColor;
+        dBG.style.backgroundColor = selectedColor;
+    }
+
+});
+
+
 const deselectAnswers = () => {
     answerElements.forEach((answer) => (answer.checked = false));
+    aBG.style.backgroundColor = defaultColor;
+    bBG.style.backgroundColor = defaultColor;
+    cBG.style.backgroundColor = defaultColor;
+    dBG.style.backgroundColor = defaultColor;
+
 };
 
 const getSelectedOption = () => {

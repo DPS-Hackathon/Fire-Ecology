@@ -12,7 +12,7 @@
     color: white;
 }
 
-p{
+p {
     margin: 0;
     padding: 0;
 }
@@ -166,7 +166,37 @@ p{
     scale: 1.1;
 }
 
-.blog-img{
+.blog-img {
     width: 100%;
     height: auto;
+}
+
+.bgdblue {
+    background-color: #05194c;
+}
+
+.bgQuizOption {
+    background-color: #17337c ;
+
+}
+
+.bgQuiz{
+    background-color: #081f5a;
+}
+
+.btn-quiz{
+    background-color: #17337c;
+    color: white;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn-quiz:hover{
+    background-color: #17337c;
+    scale: 1.1;
+    color: white;
+}
+
+label{
+    width: 100%;
 }
