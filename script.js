@@ -76,24 +76,41 @@ function signIn(){
     });
 };
 
+function getDATA() {
+    database.ref("blogs").once("value")
+        .then((snapshot) => {
+            snapshot.forEach((childSnapshot) => {
+                const post = childSnapshot.val();
+                postAUthor = post.by;
+                postTitle = post.title;
+                postContent = post.content;
+                let document_area = document.getElementById("blogList")
+                document_area.insertAdjacentHTML("afterbegin",`<div class=\"col-8 col-sm-5 col-lg-4 col-xl-3 mx-1 blog-card rounded-2 shadow-lg my-4  \"><div class=\"text-center mb-4 mt-3 blog-img\"><img src=\"https://placehold.co/400x300\" class=\"img-fluid\" alt=\"\"></div><div class=\"text-center my-4 \"><h2 class=\"fs-4\">${post.title}</h2></div><div class=\"text-center mt-3 mb-5\"><h3 class=\"fs-6\">By: ${post.postAUthor}</h3></div><div class=\"text-center mt-4 mb-4\"><a href=\"\" class=\"btn buttonPost\">Read </a></div></div>`);
+            });
+        })
+        .catch((error) => {
+            console.error("Error fetching data: ", error);
+        });
+}
+
 let num = 0
 
-function blog_save(){
+// function blog_save(){
 
-    title_field = document.getElementById("title");
-    author_field = document.getElementById("author");
-    content_field = document.getElementById("blogContent");
+//     title_field = document.getElementById("title");
+//     author_field = document.getElementById("author");
+//     content_field = document.getElementById("blogContent");
 
-    var userRef = database.ref('/blogs/');
+//     var userRef = database.ref('/blogs/');
 
-    userRef.get().then(function then(snapshot) {
-    num = snapshot.val();
-    console.log(num);
-    return num          
-    }
-    let num = then()
-    );
-}
+//     userRef.get().then(function then(snapshot) {
+//     num = snapshot.val();
+//     console.log(num);
+//     return num          
+//     }
+//     let num = then()
+//     );
+// }
 
 // If user is signed in return him to homepage 
 firebase.auth().onAuthStateChanged((user) => {
@@ -102,6 +119,12 @@ firebase.auth().onAuthStateChanged((user) => {
         { 
             window.location = "index.html"; 
         }
-    };
+    }
+    else{
+        if (["blogwrite.html"].includes(location.href.split("/").slice(-1)[0])) 
+        { 
+            window.location = "signin.html"; 
+        }
+    }
 });
 
