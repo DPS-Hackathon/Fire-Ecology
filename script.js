@@ -71,10 +71,20 @@ function signIn(){
     });
 };
 
-blog_save(){
+let num = 0
+
+function blog_save(){
+
     title_field = document.getElementById("title");
     author_field = document.getElementById("author");
     content_field = document.getElementById("blogContent");
+
+    var userRef = database.ref('/blogs/');
+
+    userRef.get().then(function(snapshot) {
+    num = snapshot.val();
+    console.log(num);
+    });
 
 }
 
