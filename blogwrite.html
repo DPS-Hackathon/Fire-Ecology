@@ -177,7 +177,6 @@
             }
         </script>
 
-<<<<<<< Updated upstream
 
         <!-- change icon on user login and logout state -->
         <script>
@@ -189,14 +188,11 @@
             firebase.auth().onAuthStateChanged((user) => {
 
                 if (user) {
-                    console.log('yes');
-                    logoutIcon.classList.remove('d-none');
-                    profileIcon.classList.add('d-none');
+                    //do nothing, all good
                 }
                 else {
-                    console.log('no');
-                    logoutIcon.classList.add('d-none');
-                    profileIcon.classList.remove('d-none');
+                    window.location = "signin.html";
+
                 };
 
             });
@@ -207,9 +203,7 @@
             }
 
         </script>
-=======
-        
->>>>>>> Stashed changes
+
 
         <!-- Bootstrap Javascript  -->
         <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
