@@ -184,7 +184,23 @@
             const profileIcon = document.getElementById('profileIcon');
             const logoutIcon = document.getElementById('LogutIcon');
 
+            firebase.auth().onAuthStateChanged((user) => {
 
+                if (user) {
+                    logoutIcon.classList.remove('d-none');
+                    profileIcon.classList.add('d-none');
+                }
+                else {
+                    logoutIcon.classList.add('d-none');
+                    profileIcon.classList.remove('d-none');
+                };
+
+            });
+
+            function logout() {
+                auth.signOut();
+                alert("Signed out successfully");
+            }
             firebase.auth().onAuthStateChanged((user) => {
 
                 if (user) {
@@ -201,6 +217,8 @@
                 auth.signOut();
                 alert("Signed out successfully");
             }
+
+
 
         </script>
 
