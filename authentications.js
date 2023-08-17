@@ -41,4 +41,42 @@ function signUp() {
             else if (errorCode == "auth/operation-not-allowed") { alert("Email not","The email is not allowed"); email.value = ""; password.value = "";username_value.value = "" }
             else { alert("Please try again",""); email.value = ""; password.value = "";username_value.value = ""}
         });
+    auth.onAuthStateChanged(user => {
+        if (user) {
+            window.location = 'index.html';
+        }
+    });
 }
+
+function signIn(){
+    let email = document.getElementById("signInEmail");
+    let password = document.getElementById("signInPassword");
+    auth.signInWithEmailAndPassword(email.value, password.value).catch(function (error) {
+
+        let errorCode = error.code;
+
+        if (errorCode == "auth/wrong-password") { alert("Wrong Password","The password used for the email is incorrect"); email.value = ""; password.value = ""; }
+        else if (errorCode == "auth/invalid-email") { alert("Invalid Email","The email is invalid"); email.value = ""; password.value = ""; }
+        else{
+        alert("An error occured, please try again","");
+        }
+        email.value = "";
+        password.value = "";
+    }
+    );
+    auth.onAuthStateChanged(user => {
+        if (user) {
+            window.location = 'index.html';
+        }
+    });
+};      
+
+// If user is signed in return him to homepage 
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        if (["signin.html#","signin.html#?","signin.html","signin.html?"].includes(location.href.split("/").slice(-1)[0]) || ["signup.html#","signup.html#?","signup.html","signup.html?"].includes(location.href.split("/").slice(-1)[0])) 
+        { 
+            window.location = "index.html"; 
+        }
+    };
+});
