@@ -157,7 +157,30 @@
 
         <!-- Application Script -->
         <script src="script.js"></script>
-        <script src="getblog.js"></script>
+        <script>
+
+            
+            function getDATA() {
+                database.ref("blogs").once("value")
+                    .then((snapshot) => {
+                        snapshot.forEach((childSnapshot) => {
+                            const post = childSnapshot.val();
+                            postAUthor = post.by;
+                            postTitle = post.title;
+                            postContent = post.content;
+
+                            blogList = document.getElementById('blogList')
+
+                            var blogCard = document.createElement('')
+                        });
+                    })
+                    .catch((error) => {
+                        console.error("Error fetching data: ", error);
+                    });
+
+            }
+            getDATA();
+        </script>
 
         <!-- Bootstrap Javascript  -->
         <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
