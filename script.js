@@ -122,6 +122,8 @@ function blog_save() {
                 const imageRef = storageRef.child("pic");
 
                 imageRef.put(file).then(() => {
+                    // Image uploaded successfully, get download URL
+                    return imageRef.getDownloadURL();
                   }).then((url) => {
                         console.log("Image URL:", url);
                         database.ref(`blogs/${id+1}/`).set(
