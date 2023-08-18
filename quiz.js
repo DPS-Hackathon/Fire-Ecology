@@ -6,7 +6,6 @@ const quizData = [
         c: "Indian Space Research Organisation",
         d: "Indian Space and Research Observatory",
         correct: "c",
-        correctBG: "cBG",
     },
     {
         question: " What is the full form of GSLV?",
@@ -15,7 +14,6 @@ const quizData = [
         c: "Geosynchronous Satellite Lifting Vehicle",
         d: "Geostar Satellite Launch Vehicle",
         correct: "b",
-        correctBG: "bBG",
 
     },
     {
