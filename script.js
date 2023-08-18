@@ -78,6 +78,7 @@ function signIn() {
 
 
 
+
 function getDATA() {
 
     const loadingIcon = document.getElementById('loading')
@@ -219,4 +220,9 @@ function userIcon() {
 function logout() {
     auth.signOut();
     generate_alert_error("Signed out successfully", "You have successfully signed out");
+}
+
+
+function closeBlog(){
+    
 }
