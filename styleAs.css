@@ -121,7 +121,7 @@ p {
 }
 
 .blog-card {
-    background-color: #191919;
+    background-color: #1d1d1d;
 
 }
 
@@ -176,27 +176,64 @@ p {
 }
 
 .bgQuizOption {
-    background-color: #17337c ;
+    background-color: #17337c;
 
 }
 
-.bgQuiz{
+.bgQuiz {
     background-color: #081f5a;
 }
 
-.btn-quiz{
+.btn-quiz {
     background-color: #17337c;
     color: white;
     transition: 0.3s;
     border: none;
 }
 
-.btn-quiz:hover{
+.btn-quiz:hover {
     background-color: #17337c;
     scale: 1.1;
     color: white;
 }
 
-label{
+label {
     width: 100%;
+}
+
+
+.caseimg {
+    width: 20em;
+
+    height: auto;
+}
+
+
+.caseStudy1 {
+    background-color: #00536a;
+    fill: #00536a;
+}
+
+.caseStudy2 {
+    background-color: #01607b;
+    fill: #01607b;
+}
+
+.caseStudy3 {
+    background-color: #006e8c;
+    fill: #01607b;
+}
+
+
+.footer-link{
+    color: #ff8330;
+
+}
+
+.footer-link:hover{
+    color: #bb5715;
+}
+
+.bgBlog{
+    background-color: rgb(22, 22, 22);
 }

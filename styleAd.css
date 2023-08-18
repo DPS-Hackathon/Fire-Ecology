@@ -104,3 +104,13 @@
     border: none;
     scale: 1.2;
 }
+
+
+.footer-link{
+    color: #ff8330;
+
+}
+
+.footer-link:hover{
+    color: #bb5715;
+}
