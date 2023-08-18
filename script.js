@@ -18,7 +18,7 @@ const database = firebase.database();
 //Function to generate alerts 
 function generate_alert_error(title, description) {
     let document_area = document.getElementById("content-area");
-    document_area.insertAdjacentHTML("afterbegin", `<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><strong>${title}</strong> ${description}<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>`);
+    document_area.insertAdjacentHTML("afterbegin", `<div class=\"alert alert-primary alert-dismissible mt-3  fade show\"  role=\"alert\"><strong class="text-dark">${title} :  </strong> ${description}<button type=\"button\" class=\"btn-close\" id=\"errorAlert\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>`);
 }
 
 function signUp() {
@@ -29,7 +29,12 @@ function signUp() {
 
     auth.createUserWithEmailAndPassword(email.value, password.value)
         .then(function (working) {
-            alert("Account created successfully");
+            database.ref("users/" + auth.currentUser.uid).set(
+                {
+                    username: username_value.value
+                }
+            );
+            generate_alert_error("Account created successfully", "Your account has been successfully created");
         })
 
         .catch(function (error) {
@@ -70,6 +75,8 @@ function signIn() {
         }
     });
 };
+
+
 
 function getDATA() {
 
@@ -161,7 +168,13 @@ firebase.auth().onAuthStateChanged((user) => {
     }
     else {
         if (["blogwrite.html"].includes(location.href.split("/").slice(-1)[0])) {
+
+
+
             window.location = "signin.html";
+
+
+
         }
     }
 });
@@ -189,5 +202,5 @@ function userIcon() {
 
 function logout() {
     auth.signOut();
-    alert("Signed out successfully");
+    generate_alert_error("Signed out successfully", "You have successfully signed out");
 }
