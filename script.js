@@ -105,10 +105,21 @@ function blog_save() {
     title_field = document.getElementById("title");
     author_field = document.getElementById("author");
     content_field = document.getElementById("blogContent");
+    posting = document.getElementById('blogPost')
+    post_button = document.getElementById('postButton');
+
+    posting.classList.remove("d-none");
+    title_field.classList.add('Disabled');
+    author_field.classList.add('Disabled');
+    content_field.classList.add('Disabled');
+    post_button.classList.add('Disabled');
+
 
     database.ref("blog_stuff").once("value")
+
+
         .then((snapshot) => {
-               
+
             snapshot.forEach((childSnapshot) => {
 
                 const post = childSnapshot.val();
@@ -118,30 +129,30 @@ function blog_save() {
                 // Image save
                 let file = document.getElementById("thumbnail").files[0]
 
-                const storageRef = firebase.storage().ref(`${id+1}`);
+                const storageRef = firebase.storage().ref(`${id + 1}`);
                 const imageRef = storageRef.child("pic");
 
                 imageRef.put(file).then(() => {
                     // Image uploaded successfully, get download URL
                     return imageRef.getDownloadURL();
-                  }).then((url) => {
-                        console.log("Image URL:", url);
-                        database.ref(`blogs/${id+1}/`).set(
+                }).then((url) => {
+                    console.log("Image URL:", url);
+                    database.ref(`blogs/${id + 1}/`).set(
                         {
-                            by:author_field.value,
-                            content:content_field.value,
-                            id:(id+1),
-                            image:url,
-                            title:title.value,
+                            by: author_field.value,
+                            content: content_field.value,
+                            id: (id + 1),
+                            image: url,
+                            title: title.value,
                         }
-                );
-                database.ref("blog_stuff/val/").set(
-                    {
-                        blog_count:(id+1)
-                    });
-            }).catch((error) => {
+                    );
+                    database.ref("blog_stuff/val/").set(
+                        {
+                            blog_count: (id + 1)
+                        });
+                }).catch((error) => {
                     console.error("Error uploading image:", error);
-                  });
+                });
 
                 // database.ref(`blogs/${id+1}/`).set(
                 //     {
@@ -157,6 +168,11 @@ function blog_save() {
         .catch((error) => {
             console.error("Error fetching data:", error);
         });
+
+    setTimeout(() => {
+        window.location = "blog.html"
+    }, 45000);
+
 }
 
 // If user is signed in return him to homepage 

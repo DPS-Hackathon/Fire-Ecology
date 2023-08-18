@@ -112,6 +112,8 @@
         </section>
 
 
+
+
         <!-- section where elemants r in which we write the blog details -->
         <section class="blogWriteBG py-5">
             <div class="container">
@@ -159,12 +161,25 @@
                     <!-- post button -->
                     <div class="mt-2">
 
-                        <button class="btn buttonPost px-3" onclick="blog_save()">Post</button>
+                        <button class="btn buttonPost px-3 " onclick="blog_save()" id="postButton">Post</button>
 
                     </div>
                 </div>
             </div>
         </section>
+
+
+        <div class="container rounded-4 d-flex align-items-center justify-content-center d-none" id="blogPost">
+            <div class="row ">
+                <div class="col-12 text-center ">
+                    <span class="spinner-border spinner-border-md text-info " aria-hidden="true"></span>
+                    <span role="status" class="fs-3 ms-2">Posting your blog, please wait...</span> <br> <br>
+                    <span role="status" class="fs-4 ms-2">You will be redirected to blog page once complete</span>
+                    
+                </div>
+            </div>
+        </div>
+
 
         <!-- Firebase Connection -->
         <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
