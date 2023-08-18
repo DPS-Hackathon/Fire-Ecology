@@ -20,7 +20,7 @@
 
     </head>
 
-    <body class="bgblack">
+    <body class="bgblack" onload="userIcon()">
 
 
 
@@ -332,33 +332,6 @@
 
         <script src="script.js"></script>
 
-
-        <!-- change icon on user login and logout state -->
-        <script>
-
-            let profileIcon = document.getElementById('profileIcon');
-            let logoutIcon = document.getElementById('LogutIcon');
-
-
-            firebase.auth().onAuthStateChanged((user) => {
-
-                if (user) {
-                    logoutIcon.classList.remove('d-none');
-                    profileIcon.classList.add('d-none');
-                }
-                else {
-                    logoutIcon.classList.add('d-none');
-                    profileIcon.classList.remove('d-none');
-                };
-
-            });
-
-            function logout() {
-                auth.signOut();
-                alert("Signed out successfully");
-            }
-
-        </script>
 
 
 

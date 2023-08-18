@@ -21,7 +21,7 @@
 
     </head>
 
-    <body>
+    <body onload="userIcon()">
 
 
 
@@ -482,39 +482,18 @@
 
 
 
+        
+
+        <!-- Firebase Connection -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+
+
         <script src="script.js"></script>
 
 
-        <!-- change icon on user login and logout state -->
-        <script>
-
-            const profileIcon = document.getElementById('profileIcon');
-            const logoutIcon = document.getElementById('LogutIcon');
-
-
-            firebase.auth().onAuthStateChanged((user) => {
-
-                if (user) {
-                    logoutIcon.classList.remove('d-none');
-                    profileIcon.classList.add('d-none');
-                }
-                else {
-                    logoutIcon.classList.add('d-none');
-                    profileIcon.classList.remove('d-none');
-                };
-
-            });
-
-            function logout() {
-                auth.signOut();
-                alert("Signed out successfully");
-            }
-
-        </script>
-
-
-
-
+        
 
 
 

@@ -17,7 +17,7 @@
 
     </head>
 
-    <body>
+    <body onload="userIcon()">
 
         <!-- navbar-->
         <nav class="navbar navbar-expand-md navbar-dark pt-3 bgblack">
@@ -182,49 +182,7 @@
             }
         </script>
 
-        <!-- change icon on user login and logout state -->
-        <script>
-
-            const profileIcon = document.getElementById('profileIcon');
-            const logoutIcon = document.getElementById('LogutIcon');
-
-            firebase.auth().onAuthStateChanged((user) => {
-
-                if (user) {
-                    logoutIcon.classList.remove('d-none');
-                    profileIcon.classList.add('d-none');
-                }
-                else {
-                    logoutIcon.classList.add('d-none');
-                    profileIcon.classList.remove('d-none');
-                };
-
-            });
-
-            function logout() {
-                auth.signOut();
-                alert("Signed out successfully");
-            }
-            firebase.auth().onAuthStateChanged((user) => {
-
-                if (user) {
-                    //do nothing, all good
-                }
-                else {
-                    window.location = "signin.html";
-
-                };
-
-            });
-
-            function logout() {
-                auth.signOut();
-                alert("Signed out successfully");
-            }
-
-
-
-        </script>
+       
 
 
         <!-- Bootstrap Javascript  -->

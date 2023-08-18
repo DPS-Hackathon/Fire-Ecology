@@ -18,7 +18,7 @@
 
     </head>
 
-    <body class="bgblack" onload="getDATA()">
+    <body class="bgblack" onload="dataAndicon()">
 
 
         <!-- navbar-->
@@ -118,7 +118,7 @@
             <div class="container">
 
                 <div class="row justify-content-center" id="loading">
-                    <div class="col-5 text-center" >
+                    <div class="col-5 text-center">
 
                         <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
                         <span role="status">Loading...</span>
@@ -183,30 +183,30 @@
         <script src="script.js"></script>
 
 
-        <!-- change icon on user login and logout state -->
+
         <script>
 
-            const profileIcon = document.getElementById('profileIcon');
-            const logoutIcon = document.getElementById('LogutIcon');
+            function dataAndicon() {
+
+                const profileIcon = document.getElementById('profileIcon');
+                const logoutIcon = document.getElementById('LogutIcon');
 
 
-            firebase.auth().onAuthStateChanged((user) => {
-                if (user) {
-                    logoutIcon.classList.remove('d-none');
-                    profileIcon.classList.add('d-none');
-                }
-                else {
-                    logoutIcon.classList.add('d-none');
-                    profileIcon.classList.remove('d-none');
-                };
+                firebase.auth().onAuthStateChanged((user) => {
 
-            });
+                    if (user) {
+                        logoutIcon.classList.remove('d-none');
+                        profileIcon.classList.add('d-none');
+                    }
+                    else {
+                        logoutIcon.classList.add('d-none');
+                        profileIcon.classList.remove('d-none');
+                    };
 
-            function logout() {
-                auth.signOut();
-                alert("Signed out successfully");
+                });
+
+                getDATA();
             }
-
         </script>
 
         <!-- Bootstrap Javascript  -->
