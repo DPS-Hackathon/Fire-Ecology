@@ -203,8 +203,8 @@ label {
 
 
 .caseimg {
-    width: 20em;
-
+    width: 15em;
+    margin: 10px;
     height: auto;
 }
 
