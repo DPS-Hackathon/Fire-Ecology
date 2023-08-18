@@ -91,8 +91,8 @@ function getDATA() {
                 postContent = post.content;
                 let document_area = document.getElementById("blogList")
                 let document_area_blog = document.getElementById("blogReads")
-                document_area.insertAdjacentHTML("afterbegin", `<div class=\"col-8 col-sm-5 col-lg-4 col-xl-3 mx-1 blog-card rounded-2 shadow-lg my-4  \"><div class=\"text-center mb-4 mt-3 blog-img\"><img src=${post.image} class=\"img-fluid\" alt=\"\"></div><div class=\"text-center my-4 \"><h2 class=\"fs-4\">${post.title}</h2></div><div class=\"text-center mt-3 mb-5\"><h3 class=\"fs-6\">By: ${post.by}</h3></div><div class=\"text-center mt-4 mb-4\"><a href=\"\" class=\"btn buttonPost\" id=\"${post.id+"_button"}\" onclick=\"showBlog(\"${post.id+"_button"}\")\">Read </a></div></div>`);
-                document_area_blog.insertAdjacentHTML("afterbegin",`<div class=\"container rounded-4 d-flex blogRead d-none\" id=\"${post.id+"_read"}\"> <div class=\"row \"> <div class=\"col-12  py-4\"> <button class=\"closeBtn\" onclick=\"closeBlog()\"> <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1.8em\" fill=\"currentColor\" class=\"bi bi-x-circle\" viewBox=\"0 0 16 16\"> <path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\" /> <path d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\" /> </svg> </button> <br> <br> <span class=\"fs-2 \" id=\"readTitle\">${post.title}</span> <br> <span class=\"fs-6 \" id=\"readAuthor\">${post.by}</span> <br> <br> <br> <span class=\"fs-6 text-justify\" id=\"readContent\">${post.content}</span> </div> </div>`)
+                document_area.insertAdjacentHTML("afterbegin", `<div class=\"col-8 col-sm-5 col-lg-4 col-xl-3 mx-1 blog-card rounded-2 shadow-lg my-4  \"><div class=\"text-center mb-4 mt-3 blog-img\"><img src=${post.image} class=\"img-fluid\" alt=\"\"></div><div class=\"text-center my-4 \"><h2 class=\"fs-4\">${post.title}</h2></div><div class=\"text-center mt-3 mb-5\"><h3 class=\"fs-6\">By: ${post.by}</h3></div><div class=\"text-center mt-4 mb-4\"><button class=\"btn buttonPost\" id=\"${post.id+"_button"}\" onclick=showBlog(\"${post.id+"_button"}\")>Read </button></div></div>`);
+                document_area_blog.insertAdjacentHTML("afterbegin",`<div class=\"container rounded-4 d-flex blogRead d-none\" id=\"${post.id+"_read"}\"> <div class=\"row \"> <div class=\"col-12  py-4\"> <button class=\"closeBtn\" onclick=\"closeBlog(\"${post.id+"_button"}\")> <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1.8em\" fill=\"currentColor\" class=\"bi bi-x-circle\" viewBox=\"0 0 16 16\"> <path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\" /> <path d=\"M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z\" /> </svg> </button> <br> <br> <span class=\"fs-2 \" id=\"readTitle\">${post.title}</span> <br> <span class=\"fs-6 \" id=\"readAuthor\">${post.by}</span> <br> <br> <br> <span class=\"fs-6 text-justify\" id=\"readContent\">${post.content}</span> </div> </div>`)
             });
             loadingIcon.classList.add('d-none')
         })
@@ -224,10 +224,14 @@ function logout() {
     generate_alert_error("Signed out successfully", "You have successfully signed out");
 }
 
-function showBlog(){
-    
+function showBlog(id){
+    let button_id = id;
+    let blog_read = document.getElementById((button_id.replace(button_id.slice(-7),"")+"_read"))
+    blog_read.classList.remove("d-none")
 }
 
-function closeBlog(){
-    
+function closeBlog(id){
+    let button_id = id;
+    let blog_read = document.getElementById((button_id.replace(button_id.slice(-7),"")+"_read"))
+    blog_read.classList.add("d-none")
 }
