@@ -18,7 +18,7 @@ const database = firebase.database();
 //Function to generate alerts 
 function generate_alert_error(title, description) {
     let document_area = document.getElementById("content-area");
-    document_area.insertAdjacentHTML("afterbegin", `<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><strong>${title}</strong> ${description}<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>`);
+    document_area.insertAdjacentHTML("afterbegin", `<div class=\"alert alert-primary alert-dismissible mt-3 fade show\" role=\"alert\"><strong class="text-dark">${title} :  </strong> ${description}<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>`);
 }
 
 function signUp() {
@@ -34,17 +34,17 @@ function signUp() {
                     username: username_value.value
                 }
             );
-            alert("Account created successfully");
+            generate_alert_error("Account created successfully","Your account has been successfully created");
         })
 
         .catch(function (error) {
 
             let errorCode = error.code;
             if (errorCode == "auth/weak-password") { generate_alert_error("Weak Password", "The password is too weak and the minimum size of password is 6 charecters"); }
-            else if (errorCode == "auth/email-already-in-use") { generate_alert_error("Email alreasy used", "The email is already in use"); email.value = ""; password.value = ""; username_value.value = "" }
+            else if (errorCode == "auth/email-already-in-use") { generate_alert_error("Email already in use", "Please sign-in with this email"); email.value = ""; password.value = ""; username_value.value = "" }
             else if (errorCode == "auth/invalid-email") { generate_alert_error("Invalid Email", "The email id is invalid"); email.value = ""; password.value = ""; username_value.value = "" }
-            else if (errorCode == "auth/operation-not-allowed") { generate_alert_error("Email not", "The email is not allowed"); email.value = ""; password.value = ""; username_value.value = "" }
-            else { generate_alert_error("Please try again", ""); email.value = ""; password.value = ""; username_value.value = "" }
+            else if (errorCode == "auth/operation-not-allowed") { generate_alert_error("Email not allowed", "The email is not allowed"); email.value = ""; password.value = ""; username_value.value = "" }
+            else { generate_alert_error("Please try again later", "An error occured"); email.value = ""; password.value = ""; username_value.value = "" }
         });
     auth.onAuthStateChanged(user => {
         if (user) {
@@ -61,7 +61,7 @@ function signIn() {
         let errorCode = error.code;
 
         if (errorCode == "auth/wrong-password") { generate_alert_error("Wrong Password", "The password used for the email is incorrect"); email.value = ""; password.value = ""; }
-        else if (errorCode == "auth/invalid-email") { generate_alert_error("Invalid Email", "The email is invalid"); email.value = ""; password.value = ""; }
+        else if (errorCode == "auth/invalid-email") { generate_alert_error("Invalid Email", "This email does not exist"); email.value = ""; password.value = ""; }
         else {
             generate_alert_error("An error occured, please try again", "");
         }
@@ -154,5 +154,5 @@ function userIcon() {
 
 function logout() {
     auth.signOut();
-    alert("Signed out successfully");
+    generate_alert_error("Signed out successfully","You have successfully signed out");
 }
