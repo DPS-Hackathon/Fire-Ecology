@@ -106,11 +106,39 @@
 }
 
 
-.footer-link{
+.footer-link {
     color: #ff8330;
 
 }
 
-.footer-link:hover{
+.footer-link:hover {
     color: #bb5715;
+}
+
+.bgCaseStudy {
+    background-color: #cd551d;
+    fill: #cd551d;
+}
+
+.button-l3{
+    background-color: #f16610;
+    color: white;
+    transition: 0.3s;
+}
+
+.button-l3:hover {
+    background-color: #f86d17;
+    border: none;
+    scale: 1.2;
+}
+
+.caseStudy-card{
+    background-color: #dc5a1e;
+    fill: #dc5a1e;
+    text-align: justify;
+}
+
+.img-logo{
+    width: 200px;
+    height: 200px;
 }

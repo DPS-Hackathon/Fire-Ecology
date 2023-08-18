@@ -270,3 +270,22 @@ label {
     background-color: rgba(255, 255, 255, 0);
     border-color: transparent;
 }
+
+.caseStudyLanding{
+    background: linear-gradient(21deg, #2b007b 0%, #3900a4 100%);
+}
+
+.img-logo{
+    width: 150px;
+    height: 150px;
+}
+
+.img-effects{
+    width: 80%;
+    height: 250px;
+}
+
+.img-landing{
+    width: auto;
+    height: 400px;
+}
