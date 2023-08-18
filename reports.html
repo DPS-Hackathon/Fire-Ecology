@@ -1,0 +1,474 @@
+<html lang="en">
+
+    <head>
+
+        <title>Fire Ecology | Home</title>
+
+
+        <!-- Bootstrap  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+        <!-- viewport IMPORTANT FOR RESPONSIVENESS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- stylesheet  -->
+        <link rel="stylesheet" href="styleAs.css">
+        <!-- Animate on Scroll -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    </head>
+
+    <body class="bgblack" onload="userIcon()">
+
+
+
+        <!-- navbar-->
+        <nav class="navbar navbar-expand-md navbar-dark pt-3 bgblack">
+
+            <div class="container-fluid align-items-center">
+
+                <a href="index.html" class="nav-brand text-light p-2 fs-3 ms-3">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hover-orange" height="1.4em" fill="white"
+                        class="bi bi-fire" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+                    </svg>
+                </a>
+
+
+                <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTwo">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+
+            <div class="collapse navbar-collapse me-3" id="navbarTwo">
+                <ul class="navbar-nav ms-auto  d-flex align-items-center ">
+
+                    <li class="nav-item mt-lg-1 mx-3 fs-5"> <b><a href="index.html"
+                                class="nav-link hover-orange ">Home</a></b>
+                    </li>
+
+
+                    <li class="nav-item mt-lg-1 mx-3 fs-5"> <b><a href="about.html"
+                                class="nav-link  hover-orange">About</a></b>
+                    </li>
+
+
+                    <li class="nav-item mt-lg-1 mx-3 fs-5"> <b><a href="blog.html"
+                                class="nav-link  hover-orange">Blog</a></b>
+                    </li>
+
+
+                    <li class="nav-item mt-lg-1 mx-3 fs-5"> <b><a href="quiz.html"
+                                class="nav-link hover-orange">Quiz</a></b>
+                    </li>
+
+                    <li class="nav-item mt-lg-1 mx-3 fs-5"> <b><a href="reports.html"
+                                class="nav-link hover-orange active">Reports</a></b>
+                    </li>
+
+                    <li class="nav-item mt-lg-1 mx-3 fs-5 " id="profileIcon"> <b><a href="signup.html"
+                                class="nav-link ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" fill="gray"
+                                    class="bi bi-person-circle hover-orange my-auto" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </a> </b>
+                    </li>
+
+
+                    <li class="nav-item mt-lg-1 mx-3 fs-5 d-none" id="LogutIcon"> <b><a href="#" class="nav-link "
+                                onclick="logout()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" fill="gray"
+                                    class="bi bi-box-arrow-right hover-orange my-auto" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                </svg>
+                            </a> </b>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            </div>
+        </nav>
+
+
+
+        <!-- landing -->
+        <section class="mt-5">
+
+            <div class="container-fluid py-5">
+                <div class="row ">
+                    <!-- left side text -->
+                    <div class="col-6 d-flex justify-content-center">
+                        <p class="fs-1 font-tektur">[Landing Page]</p>
+                    </div>
+
+                    <!-- right side img -->
+                    <div class="col-6">
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 150px;"></div>
+
+        </section>
+
+
+
+
+
+        <!-- Section 1 -->
+        <section class="mt-5 caseStudy1">
+
+            <!-- curve -->
+            <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill" fill="black" fill-opacity="1"></path>
+            </svg>
+
+            <div style="height: 20px;"></div>
+
+
+            <div class="container-fluid">
+                <div class="row justify-content-evenly">
+
+                    <div class="col-11 text-justify">
+
+                        <p class="fs-1 font-preahvihear text-center mt-5">Case Study 1: Fighting fire with leaves</p>
+
+                        <p class="fs-4 mt-5 font-exo">Forest fires are a nightmare and result in ecological disasters
+                            that are
+                            impossible to control through conventional methods. I realised we are fighting a war with
+                            the age-old conventional methods of dousing fires by beating them with bushes and tree
+                            branches." Vikas tells The Better India. <br>
+
+                            <img src="img/earthFIreEco.png" alt="" class="img-fluid caseImg float-md-start"> <br> <br>
+
+                            During his research to stop Jharkhand's horrendous forest fires, Vikas Ujjwal, Divisional
+                            Forest Officer of Jharkhand's Lohardaga district, came across a Class 6 physics chapter.
+                            According to the 'Fire Triangle' chapter, forest fires can be attributed to three components
+                            — fuel, heat and oxygen. Considering that there is possibly no way of tackling heat and
+                            oxygen, Vikas focussed on the
+                            'fuel' aspect, which in Lohardaga's case was heaps of fallen leaves. <br><br>
+
+                            With one stroke, Vikas addressed the village's fire and unemployment issues. He installed a
+                            machine to convert dry leaves into briquettes, an eco-friendly artificial fuelwood. This
+                            innovative project began in April 2019 and has borne remarkable results. It also aligns with
+                            the National Action Plan on Forest Fire, which provides a forest floor biomass management
+                            framework. Since its inception, the forests of Jharkhand's Tisiya region have remained free
+                            from major fires. <br><br>
+
+                            What's even more remarkable is the ripple effect that followed. The briquettes became a
+                            potent solution for fire prevention and economic prosperity. Villagers have discontinued the
+                            illegal cutting of wood and stopped burning leaves, which are now an asset. The villagers
+                            were initially sceptical about whether selling leaves could generate income,
+                            but ecotourism success stories later inspired them. Vikas assured them of a guaranteed
+                            income with a step-by-step process. <br>
+
+                            <img src="img/earthFIreEco.png" alt="" class="img-fluid caseImg float-md-end"> <br> <br>
+
+                            A Joint Forest Management Committee (JFMC) comprising 15 people from different villages
+                            oversees the entire briquette plant. The plant can process 1 tonne of leaves daily and
+                            employs 400 people from 13 villages. <br><br>
+
+
+                            The initiative has reduced fire by 80% and has developed a source of income for the
+                            villagers by selling the briquettes in the local market. In response to the transformation,
+                            villagers have ardently requested more of these plants. Vikas, buoyed by their enthusiasm,
+                            has promised to fulfil their requests. Lohardaga's forest department and its people
+                            represent how ecological preservation and
+                            economic growth can go hand-in-hand, setting an inspiring precedent for others. <br><br>
+
+                            This case study highlights how a scientific principle and an innovative approach can lead to
+                            holistic transformation, promoting sustainable forest management and improving livelihoods.
+                            <br><br>
+
+                            <!-- To learn more about the initiative, click the link :
+                            https://www.thebetterindia.com/252324/jharkhand-ifs-hero-solution-forest-fires-dry-leaves-briquettes-ecofriendly-innovation-earns-village-india-gop94/ -->
+                        </p>
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div style="height: 50px;"></div>
+            </div>
+
+
+        </section>
+
+
+
+        <!-- Section 2 -->
+        <section class="caseStudy2">
+
+            <!-- curve -->
+            <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="caseStudy1" fill="currentcolor" fill-opacity="1"></path>
+            </svg>
+
+            <div style="height: 20px;"></div>
+
+
+            <div class="container-fluid">
+                <div class="row justify-content-evenly">
+
+                    <div class="col-11 text-justify">
+
+                        <p class="fs-1 font-preahvihear text-center mt-5">Case Study 2: Fire and Development: Friends of
+                            Foe?
+                        </p>
+
+                        <p class="fs-4 mt-5 font-exo">The relationship between fire and development is a multifaceted
+                            and intricate one, often presenting challenges and opportunities at the intersection of
+                            human progress and ecological dynamics. In the context of urban planning and infrastructure
+                            expansion, the consequences of uncontrolled fires can be devastating. One illustrative case
+                            study is the Great Fire of London in 1666, which razed a significant portion of the city,
+                            leading to the realization of the importance of fire-resistant building materials and better
+                            urban design. This catastrophe prompted the adoption of regulations for wider streets and
+                            brick construction, laying the foundation for safer urban development. <br>
+
+                            <img src="img/earthFIreEco.png" alt="" class="img-fluid caseImg float-md-start"> <br>
+
+
+
+                            Conversely, controlled and intentional fire use has been integral to certain developmental
+                            practices. Indigenous cultures, particularly in Australia, have employed "fire-stick
+                            farming" for millennia. By strategically lighting fires to manage vegetation and promote
+                            fresh growth, they not only sustained their livelihoods but also maintained healthy
+                            landscapes. This practice underscores the synergy between fire knowledge and sustainable
+                            development, emphasizing the need for culturally sensitive approaches that integrate
+                            traditional wisdom with modern strategies.<br> <br>
+
+                            In contemporary times, the relationship between fire and development remains complex. Urban
+                            sprawl into fire-prone areas can elevate the risk of wildfires and pose significant
+                            challenges for firefighting efforts. The 2018 Camp Fire in California stands as a stark
+                            reminder of this, as rapid urban expansion encroached upon areas susceptible to fire. This
+                            tragedy underscored the necessity of stringent land-use planning, early warning systems, and
+                            community engagement in fire-prone regions.<br> <br>
+
+                            Nonetheless, controlled burns and prescribed fires are increasingly recognized as essential
+                            tools for ecosystem management and development. These practices not only reduce the risk of
+                            catastrophic wildfires but also promote forest health and biodiversity. In regions like
+                            Australia and the United States, controlled burns are utilized to mimic natural fire
+                            regimes, clear out accumulated fuels, and create firebreaks that protect communities and
+                            infrastructure.<br>
+
+
+
+                            In conclusion, the intricate relationship between fire and development encapsulates both
+                            challenges and opportunities. By drawing lessons from historical catastrophes, incorporating
+                            indigenous fire practices, and embracing controlled burn techniques, societies can navigate
+                            the complexities of development while fostering resilience against the ever-present force of
+                            fire. The key lies in forging a harmonious balance that safeguards lives, infrastructure,
+                            and ecosystems while harnessing the regenerative power of fire.<br> <br>
+                        </p>
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div style="height: 50px;"></div>
+            </div>
+
+        </section>
+
+
+
+        <!-- Section 2 -->
+        <section class="caseStudy3">
+
+            <!-- curve -->
+            <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="caseStudy2" fill="currentcolor" fill-opacity="1"></path>
+            </svg>
+
+            <div style="height: 20px;"></div>
+
+
+            <div class="container-fluid">
+                <div class="row justify-content-evenly">
+
+                    <div class="col-11 text-justify">
+
+                        <p class="fs-1 font-preahvihear text-center mt-5">Case Study 3: Fire vs Animals
+                        </p>
+
+                        <p class="fs-4 mt-5 font-exo">The intricate dance between fire and animal habitats
+                            unfolds as a captivating narrative, showcasing the delicate balance between destruction and
+                            rejuvenation, challenge and adaptation. The Yellowstone National Park in the United States
+                            serves as a compelling case study, exemplifying how fire's touch can shape and reshape
+                            animal landscapes. In 1988, a series of wildfires swept through the park, leaving in their
+                            wake a landscape of charred trees and scorched earth. Initially, these scenes painted a
+                            picture of devastation, and concerns arose about the well-being of the park's diverse animal
+                            inhabitants. <br>
+
+                            <img src="img/earthFIreEco.png" alt="" class="img-fluid caseImg float-md-start"> <br>
+
+
+                            However, over time, a remarkable transformation took place. The once-burnt areas, though
+                            seemingly desolate, soon burgeoned with new life. Young, succulent vegetation sprouted,
+                            nourished by the nutrient-rich ash left behind by the fires. This reawakening of plant life,
+                            in turn, attracted herbivores seeking fresh forage. Elk and bison, among other grazers,
+                            flocked to the rejuvenated patches, their populations swelling in response to the abundance
+                            of food. The cascade continued as predators, such as wolves and bears, followed the
+                            herbivores, capitalizing on the revitalized prey base.<br> <br>
+
+                            Interestingly, the rejuvenation wasn't universal; certain animal species faced challenges
+                            due to the changing landscape. Birds that relied on snags (standing dead trees) for nesting
+                            were impacted, as many snags were consumed by the fires. However, woodpeckers, adapted to
+                            exploiting burnt trees for insects and nest cavities, flourished in the aftermath. This
+                            exemplifies the intricate web of interactions in fire, where some species benefit
+                            from disturbance while others face setbacks.<br>
+                            <img src="img/earthFIreEco.png" alt="" class="img-fluid caseImg float-md-end"> <br>
+
+
+                            Importantly, fire's influence isn't limited to immediate post-fire effects. Over the long
+                            term, fire-driven changes can create a mosaic of habitats, each at a different stage of
+                            succession. This diversity supports a variety of species, enhancing biodiversity and
+                            strengthening ecosystem resilience. The fires of Yellowstone taught ecologists and wildlife
+                            managers valuable lessons about the role of fire in shaping animal habitats. Subsequent
+                            management strategies now incorporate controlled burns to mimic natural processes, promote
+                            vegetation diversity, and create a dynamic landscape that caters to the needs of a wide
+                            array of animal species.<br> <br>
+
+                            In conclusion, the story of fire and its impact on animal habitats is one of
+                            complexity and adaptation. Through destruction and rebirth, fire shapes landscapes,
+                            influences animal behaviors, and ultimately contributes to the intricate tapestry of life.
+                            Recognizing fire's role as a transformative force can guide informed conservation and
+                            management decisions, ensuring that animals find harmony amid the dualities of fire's havoc
+                            and rejuvenation.<br> <br>
+                        </p>
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div style="height: 50px;"></div>
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- footer -->
+        <footer class="bgblack pb-5 pt-3">
+            <div class="container">
+                <div class="row justify-content-center">
+
+
+                    <div class="col-12 col-md-6 text-center my-auto mt-5">
+                        <p class="fs-4 font-exo">Created by DPS Greater Faridabad <br> for <br> Inter DPS - CodeClash
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-5">
+                        <div class="row justify-content-evenly">
+                            <div class="col-3 justify-content-center text-center">
+                                <p class="fs-3 font-exo mb-3">Links</p>
+                                <a href="index.html"
+                                    class="fs-6 font-comfortaa text-decoration-none footer-link  my-2 ">Home </a>
+                                <br>
+                                <a href="about.html"
+                                    class="fs-6 font-comfortaa text-decoration-none footer-link  my-2 ">About
+                                </a>
+                                <br>
+                                <a href="blog.html"
+                                    class="fs-6 font-comfortaa text-decoration-none footer-link  my-2 ">Blogs
+                                </a> <br>
+                                <a href="quiz.html"
+                                    class="fs-6 font-comfortaa text-decoration-none footer-link  my-2 ">Quiz
+                                </a> <br>
+                                <a href="reports.html"
+                                    class="fs-6 font-comfortaa text-decoration-none footer-link  my-2 ">Reports
+                                </a> <br>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </footer>
+
+
+
+
+
+
+        <!-- Firebase Connection -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+
+        <script src="script.js"></script>
+
+
+
+
+
+
+        <!-- Bootstrap Javascript  -->
+        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+            </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+            integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+            integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+            crossorigin="anonymous"></script>
+
+        <!-- Animate on Css -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+
+
+
+
+
+
+
+
+    </body>
+
+</html>

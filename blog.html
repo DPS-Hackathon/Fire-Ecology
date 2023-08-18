@@ -18,9 +18,10 @@
 
     </head>
 
-    <body class="bgblack" onload="dataAndicon()">
+    <body class="bgBlog" onload="dataAndicon()">
 
 
+        
         <!-- navbar-->
         <nav class="navbar navbar-expand-md navbar-dark pt-3 bgblack">
 
@@ -47,12 +48,12 @@
                 <ul class="navbar-nav ms-auto  d-flex align-items-center ">
 
                     <li class="nav-item mt-lg-1 mx-3 fs-5"> <b><a href="index.html"
-                                class="nav-link hover-orange ">Home</a></b>
+                                class="nav-link hover-orange">Home</a></b>
                     </li>
 
 
                     <li class="nav-item mt-lg-1 mx-3 fs-5"> <b><a href="about.html"
-                                class="nav-link  hover-orange ">About</a></b>
+                                class="nav-link  hover-orange">About</a></b>
                     </li>
 
 
@@ -63,6 +64,10 @@
 
                     <li class="nav-item mt-lg-1 mx-3 fs-5"> <b><a href="quiz.html"
                                 class="nav-link hover-orange">Quiz</a></b>
+                    </li>
+
+                    <li class="nav-item mt-lg-1 mx-3 fs-5"> <b><a href="reports.html"
+                                class="nav-link hover-orange">Reports</a></b>
                     </li>
 
                     <li class="nav-item mt-lg-1 mx-3 fs-5 " id="profileIcon"> <b><a href="signup.html"
@@ -85,18 +90,6 @@
                                         d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
                                     <path fill-rule="evenodd"
                                         d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
-                                </svg>
-                            </a> </b>
-                    </li>
-
-                    <li class="nav-item mt-lg-1 mx-3 fs-5 "><b><a href="blogwrite.html" class="nav-link ">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" fill="gray"
-                                    class="bi bi-pencil-square  hover-orange my-auto" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                    <path fill-rule="evenodd"
-                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                                 </svg>
                             </a> </b>
                     </li>
@@ -127,32 +120,61 @@
                 </div>
                 <div class="row justify-content-evenly" id="blogList">
 
-                    <!-- One -->
-                    <!-- <div class="col-8 col-sm-5 col-lg-4 col-xl-3 mx-1 blog-card rounded-2 shadow-lg my-4  ">
 
-                        <div class="text-center mb-4 mt-3 blog-img">
-                            <img src="https://placehold.co/400x300" class="img-fluid" alt="">
-                        </div>
-
-
-                        <div class="text-center my-4 ">
-                            <h2 class="fs-4"> Sunset paints skies gold.</h2>
-                        </div>
-
-                        <div class="text-center mt-3 mb-5">
-                            <h3 class="fs-6">By: Max (22 character)</h3>
-                        </div>
-
-
-                        <div class="text-center mt-4 mb-4">
-                            <a href="" class="btn buttonPost">Read </a>
-                        </div>
-
-                    </div> -->
 
                 </div>
             </div>
         </section>
+
+        <!-- footer -->
+        <footer class="bgblack pb-5 pt-3">
+            <div class="container">
+                <div class="row justify-content-center">
+
+
+                    <div class="col-12 col-md-6 text-center my-auto mt-5">
+                        <p class="fs-4 font-exo">Created by DPS Greater Faridabad <br> for <br> Inter DPS - CodeClash
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-5">
+                        <div class="row justify-content-evenly">
+                            <div class="col-3 justify-content-center text-center">
+                                <p class="fs-3 font-exo mb-3">Links</p>
+                                <a href="index.html"
+                                    class="fs-6 font-comfortaa text-decoration-none footer-link  my-2 ">Home </a>
+                                <br>
+                                <a href="about.html"
+                                    class="fs-6 font-comfortaa text-decoration-none footer-link  my-2 ">About
+                                </a>
+                                <br>
+                                <a href="blog.html"
+                                    class="fs-6 font-comfortaa text-decoration-none footer-link  my-2 ">Blogs
+                                </a> <br>
+                                <a href="quiz.html"
+                                    class="fs-6 font-comfortaa text-decoration-none footer-link  my-2 ">Quiz
+                                </a> <br>
+                                <a href="reports.html"
+                                    class="fs-6 font-comfortaa text-decoration-none footer-link  my-2 ">Reports
+                                </a> <br>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </footer>
+
+
+
+
+
 
         <!-- 
         <section id="blogSections">
