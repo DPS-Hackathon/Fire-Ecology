@@ -109,8 +109,22 @@
             </div>
         </nav>
 
+        <!-- navbar-->
+        <section class="bgWhat py-2 px-3">
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-end">
+                    <div class="col-12">
+                        <div class="search-container text-start">
+                            <input type="text" id="search-input" placeholder="Search...">
+                            
+                            <ul id="suggestions-list"></ul>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
 
+        </section>
 
 
 
@@ -639,7 +653,54 @@
 
 
 
+        <script>
+            const searchInput = document.getElementById('search-input');
+            const suggestionsList = document.getElementById('suggestions-list');
 
+            const pages = [
+                { title: 'Home', url: 'home.html' },
+                { title: 'About', url: 'about.html' },
+                { title: 'Information', url: 'about.html' },
+                { title: 'Videos', url: 'videos.html' },
+                { title: 'Media', url: 'videos.html' },
+                { title: 'Blog', url: 'blog.html' },
+                { title: 'Posts', url: 'blog.html' },
+                { title: 'Quiz', url: 'quiz.html' },
+                { title: 'Game', url: 'quiz.html' },
+                { title: 'Reports', url: 'reports.html' },
+                { title: 'Case Study', url: 'reports.html' },
+
+            ];
+
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.toLowerCase();
+                const filteredPages = pages.filter(page =>
+                    page.title.toLowerCase().includes(query)
+                );
+
+                if (query === '') {
+                    suggestionsList.style.display = 'none';
+                } else {
+                    suggestionsList.style.display = 'block';
+                    suggestionsList.innerHTML = '';
+
+                    filteredPages.forEach(page => {
+                        const li = document.createElement('li');
+                        li.textContent = page.title;
+                        li.addEventListener('click', () => {
+                            window.location.href = page.url;
+                        });
+                        suggestionsList.appendChild(li);
+                    });
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!event.target.closest('.search-container')) {
+                    suggestionsList.style.display = 'none';
+                }
+            });
+        </script>
 
 
 

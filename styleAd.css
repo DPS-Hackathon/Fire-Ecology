@@ -10,7 +10,7 @@
     text-decoration: none;
     font-family: 'Comfortaa';
     color: white;
-    
+
 }
 
 
@@ -123,7 +123,7 @@
     fill: #cd551d;
 }
 
-.button-l3{
+.button-l3 {
     background-color: #f16610;
     color: white;
     transition: 0.3s;
@@ -135,31 +135,31 @@
     scale: 1.2;
 }
 
-.caseStudy-card{
+.caseStudy-card {
     background-color: #dc5a1e;
     fill: #dc5a1e;
     text-align: justify;
 }
 
-.img-logo{
+.img-logo {
     width: 200px;
     height: 200px;
 }
 
-.FAQ{
+.FAQ {
     background-color: #d46531;
 }
 
-.bgFAQbtn{
+.bgFAQbtn {
     background-color: #e7713a;
 }
 
-.bgFAQans{
+.bgFAQans {
     background-color: #ff702d;
 
 }
 
-.accordion-button{
+.accordion-button {
     --bs-accordion-btn-color: white;
 }
 
@@ -167,4 +167,33 @@
     --bs-accordion-active-bg: #e35d1f;
     --bs-accordion-active-color: black;
     --bs-border-color: transparent;
-  }
+}
+
+
+
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #d55703;
+    border-radius: 0.5em;
+    border: none;
+}
+
+#suggestions-list {
+    border-radius: 0.5em;
+    list-style: none;
+
+    padding: 0;
+    margin-top: 7px;
+    background-color: #d55703;
+
+}
+
+#suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#suggestions-list li:hover {
+    background-color: #b74b03;
+}
