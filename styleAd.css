@@ -10,7 +10,10 @@
     text-decoration: none;
     font-family: 'Comfortaa';
     color: white;
+    
 }
+
+
 
 
 
@@ -142,3 +145,26 @@
     width: 200px;
     height: 200px;
 }
+
+.FAQ{
+    background-color: #d46531;
+}
+
+.bgFAQbtn{
+    background-color: #e7713a;
+}
+
+.bgFAQans{
+    background-color: #ff702d;
+
+}
+
+.accordion-button{
+    --bs-accordion-btn-color: white;
+}
+
+.accordion {
+    --bs-accordion-active-bg: #e35d1f;
+    --bs-accordion-active-color: black;
+    --bs-border-color: transparent;
+  }
