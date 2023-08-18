@@ -192,12 +192,10 @@
 
             firebase.auth().onAuthStateChanged((user) => {
                 if (user) {
-                    console.log('yes');
                     logoutIcon.classList.remove('d-none');
                     profileIcon.classList.add('d-none');
                 }
                 else {
-                    console.log('no');
                     logoutIcon.classList.add('d-none');
                     profileIcon.classList.remove('d-none');
                 };
