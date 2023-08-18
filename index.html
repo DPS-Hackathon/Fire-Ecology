@@ -336,8 +336,8 @@
         <!-- change icon on user login and logout state -->
         <script>
 
-            const profileIcon = document.getElementById('profileIcon');
-            const logoutIcon = document.getElementById('LogutIcon');
+            let profileIcon = document.getElementById('profileIcon');
+            let logoutIcon = document.getElementById('LogutIcon');
 
 
             firebase.auth().onAuthStateChanged((user) => {
