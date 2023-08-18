@@ -18,7 +18,7 @@ const database = firebase.database();
 //Function to generate alerts 
 function generate_alert_error(title, description) {
     let document_area = document.getElementById("content-area");
-    document_area.insertAdjacentHTML("afterbegin", `<div class=\"alert alert-primary alert-dismissible mt-3 fade show\" role=\"alert\"><strong class="text-dark">${title} :  </strong> ${description}<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>`);
+    document_area.insertAdjacentHTML("afterbegin", `<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><strong>${title}</strong> ${description}<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>`);
 }
 
 function signUp() {
@@ -29,22 +29,17 @@ function signUp() {
 
     auth.createUserWithEmailAndPassword(email.value, password.value)
         .then(function (working) {
-            database.ref("users/" + auth.currentUser.uid).set(
-                {
-                    username: username_value.value
-                }
-            );
-            generate_alert_error("Account created successfully","Your account has been successfully created");
+            alert("Account created successfully");
         })
 
         .catch(function (error) {
 
             let errorCode = error.code;
             if (errorCode == "auth/weak-password") { generate_alert_error("Weak Password", "The password is too weak and the minimum size of password is 6 charecters"); }
-            else if (errorCode == "auth/email-already-in-use") { generate_alert_error("Email already in use", "Please sign-in with this email"); email.value = ""; password.value = ""; username_value.value = "" }
+            else if (errorCode == "auth/email-already-in-use") { generate_alert_error("Email alreasy used", "The email is already in use"); email.value = ""; password.value = ""; username_value.value = "" }
             else if (errorCode == "auth/invalid-email") { generate_alert_error("Invalid Email", "The email id is invalid"); email.value = ""; password.value = ""; username_value.value = "" }
-            else if (errorCode == "auth/operation-not-allowed") { generate_alert_error("Email not allowed", "The email is not allowed"); email.value = ""; password.value = ""; username_value.value = "" }
-            else { generate_alert_error("Please try again later", "An error occured"); email.value = ""; password.value = ""; username_value.value = "" }
+            else if (errorCode == "auth/operation-not-allowed") { generate_alert_error("Email not", "The email is not allowed"); email.value = ""; password.value = ""; username_value.value = "" }
+            else { generate_alert_error("Please try again", ""); email.value = ""; password.value = ""; username_value.value = "" }
         });
     auth.onAuthStateChanged(user => {
         if (user) {
@@ -61,7 +56,7 @@ function signIn() {
         let errorCode = error.code;
 
         if (errorCode == "auth/wrong-password") { generate_alert_error("Wrong Password", "The password used for the email is incorrect"); email.value = ""; password.value = ""; }
-        else if (errorCode == "auth/invalid-email") { generate_alert_error("Invalid Email", "This email does not exist"); email.value = ""; password.value = ""; }
+        else if (errorCode == "auth/invalid-email") { generate_alert_error("Invalid Email", "The email is invalid"); email.value = ""; password.value = ""; }
         else {
             generate_alert_error("An error occured, please try again", "");
         }
@@ -98,22 +93,64 @@ function getDATA() {
 
 let num = 0
 
-// function blog_save() {
+function blog_save() {
 
-//     title_field = document.getElementById("title");
-//     author_field = document.getElementById("author");
-//     content_field = document.getElementById("blogContent");
+    title_field = document.getElementById("title");
+    author_field = document.getElementById("author");
+    content_field = document.getElementById("blogContent");
 
-//     var userRef = database.ref('/blogs/');
+    database.ref("blog_stuff").once("value")
+        .then((snapshot) => {
+               
+            snapshot.forEach((childSnapshot) => {
 
-//     userRef.get().then(function then(snapshot) {
-//         num = snapshot.val();
-//         console.log(num);
-//         return num
-//     }
-//     let num = then()
-//     );
-// }
+                const post = childSnapshot.val();
+
+                let id = post.blog_count
+
+                // Image save
+                let file = document.getElementById("thumbnail").files[0]
+
+                const storageRef = firebase.storage().ref(`${id+1}`);
+                const imageRef = storageRef.child("pic");
+
+                imageRef.put(file).then(() => {
+                    // Image uploaded successfully, get download URL
+                    return imageRef.getDownloadURL();
+                  }).then((url) => {
+                        console.log("Image URL:", url);
+                        database.ref(`blogs/${id+1}/`).set(
+                        {
+                            by:author_field.value,
+                            content:content_field.value,
+                            id:(id+1),
+                            image:url,
+                            title:title.value,
+                        }
+                );
+                database.ref("blog_stuff/").set(
+                    {
+                        blog_count:(id+1)
+                    });
+            }).catch((error) => {
+                    console.error("Error uploading image:", error);
+                  });
+
+                // database.ref(`blogs/${id+1}/`).set(
+                //     {
+                //         by:author_field.value,
+                //         content:content_field.value,
+                //         id:(id+1),
+                //         image:,
+                //         title:title.value,
+                //     }
+                // );
+            });
+        })
+        .catch((error) => {
+            console.error("Error fetching data:", error);
+        });
+}
 
 // If user is signed in return him to homepage 
 firebase.auth().onAuthStateChanged((user) => {
@@ -138,12 +175,10 @@ function userIcon() {
     firebase.auth().onAuthStateChanged((user) => {
 
         if (user) {
-            console.log('yes');
             logoutIcon.classList.remove('d-none');
             profileIcon.classList.add('d-none');
         }
         else {
-            console.log('no');
             logoutIcon.classList.add('d-none');
             profileIcon.classList.remove('d-none');
         };
@@ -154,5 +189,5 @@ function userIcon() {
 
 function logout() {
     auth.signOut();
-    generate_alert_error("Signed out successfully","You have successfully signed out");
+    alert("Signed out successfully");
 }
