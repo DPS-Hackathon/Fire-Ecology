@@ -238,4 +238,12 @@ label {
     background-color: rgb(22, 22, 22);
 }
 
-
+#blogPost{
+    background-color: rgb(3, 75, 88);
+    position: fixed;
+    height: 90vh;
+    width: 90vw;
+    top: 5vh; bottom: 5vh;
+    left: 5vw; right: 5vw;
+    
+}
