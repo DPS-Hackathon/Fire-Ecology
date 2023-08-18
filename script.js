@@ -224,6 +224,9 @@ function logout() {
     generate_alert_error("Signed out successfully", "You have successfully signed out");
 }
 
+function showBlog(){
+    
+}
 
 function closeBlog(){
     
