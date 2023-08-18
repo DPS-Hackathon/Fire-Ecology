@@ -126,8 +126,8 @@
                     <div class="row justify-content-center" id="loading">
                         <div class="col-5 text-center">
 
-                            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                            <span role="status">Please wait....loading blogs</span>
+                            <span class="spinner-border spinner-border-sm" id="loadingIcon" aria-hidden="true"></span>
+                            <span role="status" id="loadingText">Please wait....loading blogs</span>
 
                         </div>
                     </div>
@@ -224,6 +224,13 @@
 
             function dataAndicon() {
 
+                console.log("hmm")
+                setTimeout(() => {
+                    console.log("hmm2")
+                    document.getElementById('loadingIcon').classList.add("d-none")
+                    document.getElementById('loadingText').textContent = "Sorry, we are facing server issues, unable to load blogs";
+                }, 5000);
+
                 const profileIcon = document.getElementById('profileIcon');
                 const logoutIcon = document.getElementById('LogutIcon');
 
@@ -241,7 +248,7 @@
 
                 });
 
-                
+
                 getDATA();
 
             }
