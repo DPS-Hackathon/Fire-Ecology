@@ -251,8 +251,8 @@ label {
 }
 
 .blogRead {
-    background-color: rgb(3, 75, 88);
-    position: absolute;
+    background-color: #303030;
+    position: fixed;
     height: fit-content;
     min-height: 90vh;
     width: 90vw;
@@ -266,26 +266,47 @@ label {
     filter: blur(10px);
 }
 
-.closeBtn{
+.closeBtn {
     background-color: rgba(255, 255, 255, 0);
     border-color: transparent;
 }
 
-.caseStudyLanding{
+.caseStudyLanding {
     background: linear-gradient(21deg, #2b007b 0%, #3900a4 100%);
 }
 
-.img-logo{
+.videosLanding {
+    background: linear-gradient(21deg, #006ccb 0%, #005b85 100%);
+}
+
+.img-logo {
     width: 150px;
     height: 150px;
 }
 
-.img-effects{
+.img-effects {
     width: 80%;
     height: 250px;
 }
 
-.img-landing{
+.img-landing {
     width: auto;
     height: 400px;
 }
+
+.video1 {
+    background-color: #00556f;
+    fill: #00556f;
+}
+
+.video2 {
+    background-color: #005f7c;
+    fill: #005f7c;
+}
+
+.video3 {
+    background-color: #006c8d;
+    fill: #006c8d;
+}
+
+ 
