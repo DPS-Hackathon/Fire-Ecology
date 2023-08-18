@@ -1,93 +1,84 @@
 const quizData = [
-    {
-        question: " What is the full form of ISRO?",
-        a: "International Space Research Organisation",
-        b: "Institute for Space Research and Observation",
-        c: "Indian Space Research Organisation",
-        d: "Indian Space and Research Observatory",
-        correct: "c",
-    },
-    {
-        question: " What is the full form of GSLV?",
-        a: "General Satellite Lifting Vehicle",
-        b: "Geosynchronous Satellite Launch Vehicle",
-        c: "Geosynchronous Satellite Lifting Vehicle",
-        d: "Geostar Satellite Launch Vehicle",
-        correct: "b",
-
-    },
-    {
-        question: " When was ISRO Established?",
-        a: "Aug 15, 1969",
-        b: "Jan 26, 1969",
-        c: "Aug 15, 1948",
-        d: "Jan 15, 1948",
-        correct: "a",
-    },
-    {
-        question: " ISRO is monitored directly under whom?",
-        a: "President",
-        b: "Aviation Minister",
-        c: "Prime Minister",
-        d: "None of the above",
-        correct: "c",
-    },
-    {
-        question: " Who is the first chairman of ISRO?",
-        a: "Mylswamy Annadurai",
-        b: "B.N. Suresh",
-        c: "Vikram Sarabhai",
-        d: "None of the above",
-        correct: "c",
-    },
-    {
-        question: " Where is the headquarters of ISRO?",
-        a: "Bangalore",
-        b: "Chennai",
-        c: "Mumbai",
-        d: "None of the above",
-        correct: "a",
-    },
-    {
-        question: " Which was the first satellite launched by ISRO?",
-        a: "Kalpana-1",
-        b: "Aryabhata",
-        c: "Bhaskara",
-        d: "None of the above",
-        correct: "b",
-    },
-    {
-        question: "What is the full form of IRNSS?",
-        a: "Indian Regional Navigation Satellite System",
-        b: "Indian Regional Navigation Solar System",
-        c: "Indian Research Navigation Satellite System",
-        d: "Indian Research Navigation Safety System",
-        correct: "a",
-    },
-    {
-        question: "In which place Dr Vikram Sarabhai Space Centre is located?",
-        a: "Shriharikota",
-        b: "Ahmedabad",
-        c: "Bangalore",
-        d: "Thiruvananthapuram",
-        correct: "d",
-    },
-    {
-        question: "Satish Dhawan Space Center located in which state?",
-        a: "Kerala",
-        b: "Andhra Pradesh",
-        c: "Karnataka",
-        d: "Tamil Nadu",
-        correct: "b",
-    },
-    {
-        question: "Who is the father of the atomic bomb (Totally a relevant question, just for fun)",
-        a: "Lewis Strauss",
-        b: "J. Robert Oppenheimer",
-        c: "Robert Downy Jr.",
-        d: "Cilian Murphy",
-        correct: "b",
-    },
+        {
+        question: "According to the 'Fire Triangle' chapter in a Class 6 physics book, what are the three components that contribute to forest fires?",
+        a: "Fuel, humidity, and sunlight",
+        b: "Heat, water, and oxygen",
+        c: "Fuel, heat, and oxygen",
+        d: "Wind, vegetation, and heat",
+        correct: "c"
+        },
+        {
+        question: "In the context of forest fires, how did Vikas Ujjwal address the 'fuel' aspect to prevent fires in Jharkhand's Lohardaga district?",
+        a: "He installed advanced firefighting equipment",
+        b: "He focused on controlling wind patterns",
+        c: "He converted dry leaves into eco-friendly briquettes",
+        d: "He established ecotourism initiatives",
+        correct: "c"
+        },
+        {
+        question: "What positive impacts did the installation of the briquette plant have on the village and its people?",
+        a: "It led to an increase in wood cutting",
+        b: "It resulted in economic prosperity and fire prevention",
+        c: "It caused major forest fires in the region",
+        d: "It contributed to an increase in illegal activities",
+        correct: "b"
+        },
+        {
+        question: "In what way did the Great Fire of London in 1666 impact urban planning and development?",
+        a: "It prompted the adoption of regulations for wider streets and brick construction",
+        b: "It led to the abandonment of cities",
+        c: "It encouraged the construction of wooden buildings",
+        d: "It resulted in the prohibition of fire use for developmental purposes",
+        correct: "a"
+        },
+        {
+        question: "How have indigenous cultures, particularly in Australia, historically used fire as a tool for development?",
+        a: "To destroy vegetation and promote desertification",
+        b: "To create barriers against human settlements",
+        c: "To intentionally manage vegetation and promote fresh growth",
+        d: "To accelerate urban expansion",
+        correct: "c"
+        },
+        {
+        question: "What lesson did the 2018 Camp Fire in California emphasize regarding development in fire-prone areas?",
+        a: "The importance of reducing firebreaks",
+        b: "The need for stricter regulations on controlled burns",
+        c: "The necessity of land-use planning, early warning systems, and community engagement",
+        d: "The irrelevance of urban expansion in fire-prone regions",
+        correct: "c"
+        },
+        {
+        question: "In the Yellowstone National Park case study, what role did fire play in shaping the landscape?",
+        a: "It resulted in permanent devastation and loss of biodiversity",
+        b: "It eradicated all animal habitats",
+        c: "It created a diverse mosaic of habitats at different stages of succession",
+        d: "It led to the extinction of animal species",
+        correct: "c"
+        },
+        {
+        question: "How did certain bird species that relied on snags for nesting respond to the fire in Yellowstone?",
+        a: "They became extinct",
+        b: "They adapted by utilizing burnt trees for nesting",
+        c: "They abandoned the park and migrated to other areas",
+        d: "They relied on humans for nesting sites",
+        correct: "b"
+        },
+        {
+        question: "What long-term impact did fire-driven changes have on the Yellowstone landscape?",
+        a: "It resulted in a permanent reduction of biodiversity",
+        b: "It led to the abandonment of the park by animals",
+        c: "It created a mosaic of habitats that enhanced biodiversity and ecosystem resilience",
+        d: "It caused all animals to migrate away from the park",
+        correct: "c"
+        },
+        {
+        question: "What did the fires of Yellowstone teach ecologists and wildlife managers about fire's role in shaping animal habitats?",
+        a: "Fires have no impact on animal habitats",
+        b: "Fires only benefit herbivores",
+        c: "Fire knowledge is irrelevant to understanding animal habitats",
+        d: "Fire can shape landscapes, influence animal behaviors, and contribute to biodiversity",
+        correct: "d"
+        },
 ];
 
 const quiz = document.getElementById("quiz");
