@@ -135,7 +135,7 @@ function blog_save() {
                             title:title.value,
                         }
                 );
-                database.ref("blog_stuff/").set(
+                database.ref("blog_stuff/val/").set(
                     {
                         blog_count:(id+1)
                     });
